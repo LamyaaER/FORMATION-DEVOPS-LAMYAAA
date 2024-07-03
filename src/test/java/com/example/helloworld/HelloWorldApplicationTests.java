@@ -1,23 +1,17 @@
-package com.example.helloworld;
-
-import com.example.helloworld.controller.HelloWorldController;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
+import com.example.helloworld.controller.HelloWorldController; // Vérifiez que ce chemin est correct
 
 @SpringBootTest
-class HelloWorldApplicationTests {
+public class HelloWorldApplicationTests {
 
     @Autowired
     private HelloWorldController helloWorldController;
 
     @Test
     void contextLoads() {
-        // to ensure that controller is getting created inside the application context
         assertNull(helloWorldController);
     }
-
 }
